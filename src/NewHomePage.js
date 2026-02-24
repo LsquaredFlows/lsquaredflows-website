@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { FaRobot, FaTimes, FaComments, FaLinkedin, FaInstagram, FaEnvelope, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { SiOpenai, SiN8N, SiAirtable, SiSlack, SiGoogleanalytics, SiGooglecalendar, SiGmail, SiNotion, SiWhatsapp } from 'react-icons/si';
+import { FaRobot, FaTimes, FaComments, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import logo from './logohere.png';
 import ChatbotTermsModal from './ChatbotTermsModal';
 import './NewDesign.css';
@@ -9,7 +8,6 @@ import './NewDesign.css';
 function NewHomePage() {
   // Preserve existing functionality
   const calendlyUrl = 'https://calendly.com/lsquaredflows/30min';
-  const demoEmailUrl = 'mailto:sales@lsquaredflows.agency?subject=Demo Request - L² Flows AI Automation&body=Hi L² Flows team,%0D%0A%0D%0AI would like to request a demo of your AI automation platform.%0D%0A%0D%0APlease include:%0D%0A- My business type:%0D%0A- Current challenges:%0D%0A- Preferred demo time:%0D%0A%0D%0AThank you!';
   
   // AI Customer Support Chatbot state
   const [chatbotOpen, setChatbotOpen] = useState(false);
@@ -199,71 +197,6 @@ function NewHomePage() {
     { title: 'Predictive Analytics', desc: 'Turn data into forecasts and recommendations that drive growth.', icon: '📈' },
     { title: 'API Development', desc: 'Custom integrations and APIs that connect your entire stack.', icon: '⚡' }
   ];
-
-  const industries = [
-    { icon: '🏥', title: 'Healthcare', desc: 'Patient management, appointment scheduling, and medical records automation' },
-    { icon: '🛒', title: 'E-commerce', desc: 'Order processing, inventory management, and customer service automation' },
-    { icon: '🏠', title: 'Real Estate', desc: 'Property listings, client management, and automated follow-ups' },
-    { icon: '💼', title: 'Professional Services', desc: 'Client onboarding, project tracking, and billing automation' },
-    { icon: '🏭', title: 'Manufacturing', desc: 'Supply chain automation, quality control, and production scheduling' },
-    { icon: '🎓', title: 'Education', desc: 'Student enrollment, course management, and automated grading' }
-  ];
-
-  const tools = [
-    { icon: <SiOpenai />, name: 'OpenAI', desc: 'AI for research, content, and automation', link: 'https://openai.com' },
-    { icon: <SiN8N />, name: 'n8n', desc: 'Workflow automation platform', link: 'https://n8n.io' },
-    { icon: <SiAirtable />, name: 'Airtable', desc: 'Database meets spreadsheet', link: 'https://airtable.com' },
-    { icon: <SiSlack />, name: 'Slack', desc: 'Team communication platform', link: 'https://slack.com' },
-    { icon: <SiGoogleanalytics />, name: 'Google Analytics', desc: 'Website analytics', link: 'https://analytics.google.com' },
-    { icon: <SiGooglecalendar />, name: 'Google Calendar', desc: 'Calendar management', link: 'https://calendar.google.com' },
-    { icon: <SiGmail />, name: 'Gmail', desc: 'Email platform', link: 'https://gmail.com' },
-    { icon: <SiNotion />, name: 'Notion', desc: 'All-in-one workspace', link: 'https://notion.so' },
-    { icon: <SiWhatsapp />, name: 'WhatsApp', desc: 'Messaging platform', link: 'https://whatsapp.com' }
-  ];
-
-  const testimonials = [
-    {
-      quote: 'As the owner of a barber shop, I was thrilled when L² Flows implemented an automated scheduling system with voice commands. Clients can now easily book appointments without waiting on the line, and my calendar is always up-to-date and error-free. This innovation saves me hours of admin work every week and has elevated our service quality.',
-      name: 'Ivan B.',
-      title: 'Barber Shop Owner',
-      timeSaved: '8-10 hours per week'
-    },
-    {
-      quote: 'The automated booking system has transformed our restaurant operations. We went from managing reservations manually to having an AI-powered system that handles everything seamlessly. Our no-show rate decreased significantly, and customer satisfaction is at an all-time high.',
-      name: 'Maria S.',
-      title: 'Restaurant Manager',
-      timeSaved: '6-8 hours per week'
-    }
-  ];
-
-  // Testimonial rotation state
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-  // Calculator state
-  const [inquiryValue, setInquiryValue] = useState(500);
-  const [missedInquiries, setMissedInquiries] = useState(50);
-  const [calculatedRevenue, setCalculatedRevenue] = useState(25000);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 8000);
-    return () => clearInterval(timer);
-  }, [testimonials.length]);
-
-  // Calculator effect
-  useEffect(() => {
-    const revenue = inquiryValue * missedInquiries;
-    setCalculatedRevenue(revenue);
-  }, [inquiryValue, missedInquiries]);
-
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
 
   // Smooth scrolling for anchor links
   useEffect(() => {

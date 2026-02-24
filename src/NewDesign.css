@@ -84,13 +84,13 @@ body::before {
     border-color: rgba(232, 232, 226, 0.4);
 }
 
-/* Navigation — minimal, borderless, 48px vertical / 48–96px horizontal */
+/* Navigation — minimal, borderless; compact height (~25% smaller) */
 .navbar {
     background: var(--bg-primary);
     position: sticky;
     top: 0;
     z-index: 1001;
-    padding: 48px 48px;
+    padding: 28px 48px;
     border-bottom: none;
 }
 
@@ -106,35 +106,35 @@ body::before {
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     text-decoration: none;
     color: inherit;
 }
 
 .nav-logo-img {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     object-fit: contain;
 }
 
 .nav-logo h2 {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
-    font-size: 2.75rem;
+    font-size: 2rem;
     color: var(--text-primary);
     display: block;
 }
 
 .nav-menu {
     display: flex;
-    gap: 32px;
+    gap: 24px;
     align-items: center;
 }
 
 .nav-menu .nav-link {
     color: var(--text-secondary);
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     transition: color 0.2s ease;
 }
@@ -146,9 +146,10 @@ body::before {
 .nav-menu .nav-cta {
     background: var(--accent);
     color: var(--bg-primary);
-    padding: 10px 20px;
+    padding: 8px 18px;
     border-radius: 8px;
     font-weight: 400;
+    font-size: 14px;
 }
 
 .nav-menu .nav-cta:hover {
@@ -543,7 +544,7 @@ body::before {
 }
 
 @media (max-width: 768px) {
-    .navbar { padding: 24px 24px; }
+    .navbar { padding: 18px 24px; }
     .hero { padding: 64px 24px 96px; }
     .hero-title { font-size: 52px; }
     .hero-stats { grid-template-columns: 1fr; gap: 24px; }
