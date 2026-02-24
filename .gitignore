@@ -19,6 +19,7 @@
 *.pem
 
 # Housekeeping: do not commit
+personal-ai-brain/
 *.xlsx
 *.docx
 *docx*.txt
