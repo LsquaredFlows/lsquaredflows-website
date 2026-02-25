@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaRobot, FaTimes, FaComments, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import logo from './logohere.png';
@@ -23,6 +24,9 @@ function NewHomePage() {
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [hasNotification, setHasNotification] = useState(false);
+
+  // Mobile menu state (must be before useEffect that uses it)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Generate or retrieve session ID (persists until page reload)
   const [sessionId] = useState(() => {
@@ -52,9 +56,9 @@ function NewHomePage() {
     }
   }, []);
 
-  // Prevent body scroll when chatbot is open (mobile fix)
+  // Prevent body scroll when chatbot or mobile menu is open (mobile fix)
   useEffect(() => {
-    if (chatbotOpen) {
+    if (chatbotOpen || mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
       document.body.style.position = 'fixed';
       document.body.style.width = '100%';
@@ -64,13 +68,12 @@ function NewHomePage() {
       document.body.style.width = '';
     }
 
-    // Cleanup on unmount
     return () => {
       document.body.style.overflow = '';
       document.body.style.position = '';
       document.body.style.width = '';
     };
-  }, [chatbotOpen]);
+  }, [chatbotOpen, mobileMenuOpen]);
 
   // Handle terms acceptance
   const handleTermsAccept = () => {
@@ -173,9 +176,6 @@ function NewHomePage() {
     }
   };
 
-  // Mobile menu state
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   // Revenue calculator (spec: employees × hourly rate × hours/week × 52)
   const [employees, setEmployees] = useState(10);
   const [hourlyRate, setHourlyRate] = useState(50);
@@ -237,6 +237,17 @@ function NewHomePage() {
           </div>
         </div>
       </nav>
+
+      {/* Mobile menu overlay: tap to close, prevents background scroll */}
+      {mobileMenuOpen && (
+        <div
+          className="nav-menu-overlay"
+          onClick={() => setMobileMenuOpen(false)}
+          aria-hidden="true"
+          role="button"
+          tabIndex={-1}
+        />
+      )}
 
       {/* Hero — Refined Dark */}
       <section id="home" className="hero">
@@ -366,6 +377,13 @@ function NewHomePage() {
                 <li><a href="#services">Case Studies</a></li>
                 <li><a href="#contact">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div className="footer-column">
+              <h4>Legal</h4>
+              <ul>
+                <li><Link to="/terms-of-service">Terms of Service</Link></li>
+                <li><Link to="/privacy-policy">Privacy Policy</Link></li>
               </ul>
             </div>
           </div>
