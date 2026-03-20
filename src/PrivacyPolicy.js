@@ -283,21 +283,21 @@ const PrivacyPolicy = () => {
             <div className="contact-category">
               <h3>Data Protection Inquiries</h3>
               <p>For questions about this Privacy Policy or your data rights:</p>
-              <p><strong>Email:</strong> privacy@lsquaredflows.com</p>
+              <p><strong>Email:</strong> lsquaredflows@gmail.com</p>
               <p><strong>Subject Line:</strong> Privacy Policy Inquiry</p>
             </div>
 
             <div className="contact-category">
               <h3>Service-Specific Questions</h3>
               <p>For questions about specific services or data handling:</p>
-              <p><strong>Email:</strong> support@lsquaredflows.com</p>
+              <p><strong>Email:</strong> lsquaredflows@gmail.com</p>
               <p><strong>Subject Line:</strong> Service Privacy Question</p>
             </div>
 
             <div className="contact-category">
               <h3>General Contact</h3>
               <p><strong>L² Flows Agency</strong></p>
-              <p><strong>Email:</strong> info@lsquaredflows.com</p>
+              <p><strong>Email:</strong> lsquaredflows@gmail.com</p>
               <p><strong>Website:</strong> https://lsquaredflows.agency</p>
             </div>
           </section>
@@ -310,7 +310,7 @@ const PrivacyPolicy = () => {
                 
                 <div className="company-info">
                   <p>Matije Gupca 1, 21000 Split, Hrvatska</p>
-                  <p>Email: sales@lsquaredflows.agency | Tel: +385955764483</p>
+                  <p>Email: lsquaredflows@gmail.com | Tel: +385955764483</p>
                   <p>All rights reserved.</p>
                 </div>
               </div>

@@ -264,7 +264,7 @@ const TermsOfService = () => {
                 
                 <div className="company-info">
                   <p>Matije Gupca 1, 21000 Split, Hrvatska</p>
-                  <p>Email: sales@lsquaredflows.agency | Tel: +385955764483</p>
+                  <p>Email: lsquaredflows@gmail.com | Tel: +385955764483</p>
                   <p>All rights reserved.</p>
                 </div>
               </div>

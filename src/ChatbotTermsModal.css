@@ -4,116 +4,124 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(30, 28, 24, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .terms-modal {
-  background: var(--bg-surface, #1a1a1e);
-  border: 1px solid var(--border, rgba(0, 196, 122, 0.2));
+  background: #faf7f2;
+  border: 1px solid rgba(201, 169, 110, 0.15);
   border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
-  max-width: 500px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(201, 169, 110, 0.08);
+  max-width: 480px;
   width: 90%;
   max-height: 80vh;
   overflow-y: auto;
-  color: var(--text-primary, #e8e8e2);
 }
 
 .terms-modal-header {
-  padding: 30px 30px 20px;
-  border-bottom: 1px solid var(--border, rgba(0, 196, 122, 0.15));
+  padding: 32px 32px 20px;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.12);
 }
 
 .terms-modal-header h2 {
   margin: 0;
-  font-size: 1.8rem;
-  color: var(--accent, #00c47a);
-  font-weight: 700;
+  font-family: 'Syne', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1e1c18;
 }
 
 .terms-modal-content {
-  padding: 30px;
-  font-size: 1rem;
-  line-height: 1.8;
-  color: var(--text-secondary, #888884);
+  padding: 28px 32px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
 }
 
 .terms-modal-content p {
-  margin: 0 0 15px 0;
-  color: var(--text-primary, #e8e8e2);
+  margin: 0 0 16px 0;
+  color: #4a4637;
 }
 
 .terms-modal-content ul {
   list-style: none;
   padding: 0;
-  margin: 15px 0;
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .terms-modal-content ul li {
-  padding: 10px 0;
-  font-size: 0.95rem;
-  color: var(--text-secondary, #888884);
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  color: #4a4637;
+  background: rgba(201, 169, 110, 0.06);
+  border-radius: 10px;
+  border-left: 3px solid #c9a96e;
 }
 
 .terms-modal-content a {
-  color: var(--accent, #00c47a);
+  color: #c9a96e;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .terms-modal-content a:hover {
-  color: #00a86b;
+  color: #b08d4a;
   text-decoration: underline;
 }
 
 .terms-modal-footer {
-  padding: 20px 30px 30px;
+  padding: 20px 32px 28px;
   display: flex;
-  gap: 15px;
+  gap: 12px;
   justify-content: flex-end;
-  border-top: 1px solid var(--border, rgba(0, 196, 122, 0.1));
+  border-top: 1px solid rgba(201, 169, 110, 0.1);
 }
 
 .terms-btn {
   padding: 12px 24px;
   border-radius: 12px;
-  font-size: 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
   font-weight: 600;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
 .terms-btn-cancel {
   background: transparent;
-  color: var(--text-secondary, #888884);
-  border: 2px solid var(--border-light, rgba(232, 232, 226, 0.2));
+  color: #8a8172;
+  border: 1.5px solid rgba(201, 169, 110, 0.2);
+  border-radius: 12px;
 }
 
 .terms-btn-cancel:hover {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text-primary, #e8e8e2);
-  border-color: var(--border-hover, rgba(0, 196, 122, 0.25));
+  background: rgba(201, 169, 110, 0.06);
+  color: #1e1c18;
+  border-color: rgba(201, 169, 110, 0.35);
 }
 
 .terms-btn-accept {
-  background: var(--accent, #00c47a);
-  color: var(--bg-primary, #0e0e10);
-  box-shadow: 0 4px 16px rgba(0, 196, 122, 0.25);
+  background: linear-gradient(135deg, #c9a96e, #d4a855);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(201, 169, 110, 0.25);
 }
 
 .terms-btn-accept:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 196, 122, 0.35);
-  background: #00a86b;
+  box-shadow: 0 8px 24px rgba(201, 169, 110, 0.35);
 }
 
 .terms-btn-accept:active {
@@ -128,23 +136,24 @@
   }
 
   .terms-modal-header {
-    padding: 20px 20px 15px;
+    padding: 24px 24px 16px;
   }
 
   .terms-modal-header h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .terms-modal-content {
-    padding: 20px;
+    padding: 20px 24px;
   }
 
   .terms-modal-footer {
-    padding: 15px 20px 20px;
+    padding: 16px 24px 24px;
     flex-direction: column-reverse;
   }
 
   .terms-btn {
     width: 100%;
+    text-align: center;
   }
 }
