@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
-import { FaRobot, FaTimes, FaComments, FaLinkedin, FaInstagram, FaEnvelope, FaArrowRight, FaShip, FaHotel, FaCommentDots, FaCogs, FaConciergeBell, FaCar, FaChartLine, FaShieldAlt, FaHeartbeat, FaBriefcase, FaCheckCircle, FaMapMarkerAlt, FaClock, FaChevronDown } from 'react-icons/fa';
+import { FaRobot, FaTimes, FaComments, FaLinkedin, FaInstagram, FaEnvelope, FaArrowRight, FaShip, FaHotel, FaCommentDots, FaCogs, FaConciergeBell, FaCar, FaHeartbeat, FaBriefcase, FaCheckCircle, FaMapMarkerAlt, FaClock, FaChevronDown } from 'react-icons/fa';
 import { HeroScene, ServicesOrbitScene, DevCycleScene, ProjectsScene } from './components/Scene3D';
 import IntroBurst from './components/IntroBurst';
 import ChatbotTermsModal from './ChatbotTermsModal';

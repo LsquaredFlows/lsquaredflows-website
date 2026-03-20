@@ -1,13 +1,11 @@
 import React, { useRef, useMemo, useState, useCallback } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Sphere, MeshDistortMaterial } from '@react-three/drei';
-import * as THREE from 'three';
 
 /* ─── Particle that explodes outward ─── */
 function BurstParticle({ delay, direction, speed, size, color }) {
   const ref = useRef();
   const startTime = useRef(null);
-  const initialPos = useRef(new THREE.Vector3(0, 0, 0));
 
   useFrame((state) => {
     if (!ref.current) return;
