@@ -261,7 +261,7 @@ function NewHomePage() {
             </p>
             <div className="hero-buttons">
               <motion.button className="btn btn-primary" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={() => window.open(calendlyUrl, '_blank')}>
-                Book a Strategy Call
+                Inquire Demo
               </motion.button>
               <motion.button className="btn btn-secondary" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
                 View Case Studies
@@ -351,9 +351,9 @@ function NewHomePage() {
         <div className="container">
           <div className="footer-cta-block">
             <h2>Ready to automate your operations?</h2>
-            <p>Book a strategy call and see how L² Flows can scale your revenue without scaling headcount.</p>
+            <p>Inquire demo and see how L² Flows can scale your revenue without scaling headcount.</p>
             <motion.button className="btn btn-primary" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={() => window.open(calendlyUrl, '_blank')}>
-              Schedule a Call
+              Inquire Demo
             </motion.button>
           </div>
           <div className="footer-grid">
@@ -392,7 +392,7 @@ function NewHomePage() {
             <div className="footer-socials">
               <a href="https://linkedin.com/company/lsquaredflows" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
               <a href="https://instagram.com/lsquaredflows" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
-              <a href="mailto:sales@lsquaredflows.agency" aria-label="Email"><FaEnvelope /></a>
+              <a href="mailto:lsquaredflows@gmail.com" aria-label="Email"><FaEnvelope /></a>
             </div>
           </div>
         </div>
