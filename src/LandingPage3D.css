@@ -4,6 +4,10 @@
    ═══════════════════════════════════════════════════════════ */
 
 :root {
+  --font-base: "Outfit", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-heading: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-marker: "Gill Sans", sans-serif;
   --cream-50: #fefcf7;
   --cream-100: #fdf8ed;
   --cream-200: #f8f0db;
@@ -33,7 +37,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-base);
   background: var(--bg-body);
   color: var(--text-primary);
   overflow-x: hidden;
@@ -72,7 +76,7 @@ button, a { touch-action: manipulation; }
   display: flex;
   align-items: baseline;
   gap: 6px;
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   pointer-events: none;
 }
 
@@ -105,6 +109,7 @@ button, a { touch-action: manipulation; }
 }
 
 .section-tag {
+  font-family: var(--font-marker);
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 2px;
@@ -114,7 +119,7 @@ button, a { touch-action: manipulation; }
 }
 
 .section-heading {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   line-height: 1.15;
@@ -165,7 +170,7 @@ button, a { touch-action: manipulation; }
   display: flex;
   align-items: baseline;
   gap: 4px;
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
 }
 
 .logo-l2 {
@@ -190,7 +195,7 @@ button, a { touch-action: manipulation; }
 .nav-3d-links a {
   background: none;
   border: none;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.92rem;
   font-weight: 400;
   color: var(--text-secondary);
@@ -290,7 +295,7 @@ button, a { touch-action: manipulation; }
 }
 
 .hero-3d-title {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(2.5rem, 5.5vw, 4.5rem);
   font-weight: 800;
   line-height: 1.08;
@@ -321,7 +326,7 @@ button, a { touch-action: manipulation; }
   padding: 16px 32px;
   background: linear-gradient(135deg, var(--gold-light), var(--gold));
   color: white;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 600;
   border-radius: var(--radius-sm);
@@ -341,7 +346,7 @@ button, a { touch-action: manipulation; }
   padding: 16px 32px;
   background: transparent;
   color: var(--text-primary);
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 500;
   border: 1.5px solid rgba(26, 24, 20, 0.15);
@@ -366,7 +371,7 @@ button, a { touch-action: manipulation; }
 }
 
 .stat-value {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 800;
   color: var(--text-primary);
@@ -487,7 +492,7 @@ button, a { touch-action: manipulation; }
 }
 
 .services-orbit-card h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 10px;
@@ -611,7 +616,7 @@ button, a { touch-action: manipulation; }
   border-radius: var(--radius);
   cursor: pointer;
   text-align: left;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   transition: var(--transition);
   will-change: transform;
   -webkit-transform: translateZ(0);
@@ -647,7 +652,7 @@ button, a { touch-action: manipulation; }
 }
 
 .project-card-title {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -701,7 +706,7 @@ button, a { touch-action: manipulation; }
 }
 
 .project-detail-number {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-marker);
   font-size: 0.85rem;
   font-weight: 800;
   color: var(--gold);
@@ -713,7 +718,7 @@ button, a { touch-action: manipulation; }
 }
 
 .project-detail-right h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 12px;
@@ -775,7 +780,7 @@ button, a { touch-action: manipulation; }
 }
 
 .section-tag-light {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-marker);
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -785,7 +790,7 @@ button, a { touch-action: manipulation; }
 }
 
 .process-orbit-title {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 800;
   color: white;
@@ -832,7 +837,7 @@ button, a { touch-action: manipulation; }
 }
 
 .process-phase-num {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-marker);
   font-size: 0.85rem;
   font-weight: 800;
   color: var(--gold);
@@ -847,7 +852,7 @@ button, a { touch-action: manipulation; }
 }
 
 .process-phase-card h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.3rem;
   font-weight: 700;
   color: white;
@@ -890,7 +895,7 @@ button, a { touch-action: manipulation; }
   top: 50%;
   right: 8%;
   transform: translateY(-50%);
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(10rem, 20vw, 20rem);
   font-weight: 800;
   color: white;
@@ -924,7 +929,7 @@ button, a { touch-action: manipulation; }
   top: 78%;
   right: 16px;
   z-index: 4;
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-marker);
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -993,7 +998,7 @@ button, a { touch-action: manipulation; }
 }
 
 .career-badge {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-marker);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1005,7 +1010,7 @@ button, a { touch-action: manipulation; }
 }
 
 .career-card h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -1045,7 +1050,7 @@ button, a { touch-action: manipulation; }
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-marker);
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--gold);
@@ -1067,7 +1072,7 @@ button, a { touch-action: manipulation; }
 }
 
 .career-details h4 {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -1123,7 +1128,7 @@ button, a { touch-action: manipulation; }
 }
 
 .cta-3d-inner h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   font-weight: 800;
   margin-bottom: 16px;
@@ -1168,7 +1173,7 @@ button, a { touch-action: manipulation; }
   display: flex;
   align-items: baseline;
   gap: 4px;
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
 }
 
 .footer-logo .logo-l2 { color: var(--gold); }
@@ -1201,7 +1206,7 @@ button, a { touch-action: manipulation; }
 }
 
 .footer-3d-links h4 {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: 0.95rem;
   font-weight: 700;
   color: white;
@@ -1213,7 +1218,7 @@ button, a { touch-action: manipulation; }
   display: block;
   background: none;
   border: none;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.88rem;
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
@@ -1400,7 +1405,7 @@ button, a { touch-action: manipulation; }
   padding: 10px 14px;
   border: 1px solid var(--cream-300);
   border-radius: var(--radius-sm);
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.88rem;
   outline: none;
   background: var(--cream-50);
@@ -1417,7 +1422,7 @@ button, a { touch-action: manipulation; }
   color: white;
   border: none;
   border-radius: var(--radius-sm);
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
@@ -1545,9 +1550,12 @@ button, a { touch-action: manipulation; }
     left: 20px;
     right: 20px;
     max-width: none;
-    top: auto;
-    bottom: 60px;
-    transform: none;
+    /* Center the active service card vertically on mobile
+       so the 3D canvas + card sit in the middle of the phone view
+       instead of hugging the bottom edge. */
+    top: 40%;
+    bottom: auto;
+    transform: translateY(-50%);
     padding: 24px 20px;
   }
 
@@ -1597,10 +1605,15 @@ button, a { touch-action: manipulation; }
   }
 
   .process-phase-card {
-    bottom: 30px;
+    /* Center the active phase card vertically on mobile
+       so it sits over the 3D canvas instead of hugging
+       the bottom edge of the phone viewport. */
+    top: 40%;
+    bottom: auto;
     left: 16px;
     right: 16px;
     max-width: none;
+    transform: translateY(-50%);
     padding: 20px 16px;
   }
 
@@ -1687,7 +1700,15 @@ button, a { touch-action: manipulation; }
   .process-orbit-header { padding-top: 50px; }
   .process-orbit-title { font-size: 1.5rem; }
   .process-orbit-subtitle { font-size: 0.85rem; }
-  .process-phase-card { bottom: 20px; left: 12px; right: 12px; padding: 18px 14px; }
+  .process-phase-card {
+    /* Keep centered behavior on very small phones too */
+    top: 38%;
+    bottom: auto;
+    left: 12px;
+    right: 12px;
+    transform: translateY(-50%);
+    padding: 18px 14px;
+  }
   .process-phase-card h3 { font-size: 1.1rem; }
   .process-phase-card p { font-size: 0.82rem; }
   .process-phase-num { width: 30px; height: 30px; font-size: 0.75rem; }
