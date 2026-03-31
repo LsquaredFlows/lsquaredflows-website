@@ -1550,13 +1550,16 @@ button, a { touch-action: manipulation; }
     left: 20px;
     right: 20px;
     max-width: none;
-    /* Center the active service card vertically on mobile
-       so the 3D canvas + card sit in the middle of the phone view
-       instead of hugging the bottom edge. */
-    top: 40%;
+    top: 18%;
     bottom: auto;
-    transform: translateY(-50%);
+    transform: none;
     padding: 24px 20px;
+  }
+
+  /* Keep card sizes unchanged; shift only the 3D canvas upward on mobile */
+  .services-orbit-canvas > div,
+  .process-orbit-canvas > div {
+    transform: translateY(-10vh);
   }
 
   .services-orbit-card h3 {
@@ -1605,15 +1608,12 @@ button, a { touch-action: manipulation; }
   }
 
   .process-phase-card {
-    /* Center the active phase card vertically on mobile
-       so it sits over the 3D canvas instead of hugging
-       the bottom edge of the phone viewport. */
-    top: 40%;
+    top: 18%;
     bottom: auto;
     left: 16px;
     right: 16px;
     max-width: none;
-    transform: translateY(-50%);
+    transform: none;
     padding: 20px 16px;
   }
 
@@ -1676,6 +1676,7 @@ button, a { touch-action: manipulation; }
 
   /* Services */
   .services-orbit-card { padding: 20px 16px; left: 12px; right: 12px; bottom: 40px; }
+  .services-orbit-card { top: 16%; bottom: auto; }
   .services-orbit-card h3 { font-size: 1.05rem; }
   .services-orbit-card p { font-size: 0.85rem; }
   .services-orbit-dots { right: 10px; gap: 8px; }
@@ -1701,13 +1702,16 @@ button, a { touch-action: manipulation; }
   .process-orbit-title { font-size: 1.5rem; }
   .process-orbit-subtitle { font-size: 0.85rem; }
   .process-phase-card {
-    /* Keep centered behavior on very small phones too */
-    top: 38%;
+    top: 16%;
     bottom: auto;
     left: 12px;
     right: 12px;
-    transform: translateY(-50%);
+    transform: none;
     padding: 18px 14px;
+  }
+  .services-orbit-canvas > div,
+  .process-orbit-canvas > div {
+    transform: translateY(-12vh);
   }
   .process-phase-card h3 { font-size: 1.1rem; }
   .process-phase-card p { font-size: 0.82rem; }
